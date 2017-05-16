@@ -1,0 +1,2 @@
+SELECT ch.Name FROM [dbo].Characters as ch
+ORDER BY ch.Name

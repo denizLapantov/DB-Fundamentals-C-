@@ -1,0 +1,4 @@
+SELECT a.TownID, a.Name FROM [dbo].[Towns] AS a
+WHERE LEFT(a.Name, 1) != 'B' AND  LEFT(a.Name, 1) !='R' AND  LEFT(a.Name, 1) !='D'
+ORDER BY a.Name ASC
+

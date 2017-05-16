@@ -1,0 +1,29 @@
+CREATE TABLE Persons
+(
+PersonID INT NOT NULL PRIMARY KEY IDENTITY,
+FirstName VARCHAR(50),
+Salary FLOAT(2),
+PassportID INT 
+)
+
+CREATE TABLE Passports
+(
+PassportID INT NOT NULL PRIMARY KEY IDENTITY(101,1),
+PassportNumber Varchar(50) 
+)
+
+INSERT INTO Persons(FirstName,Salary,PassportID)
+VALUES
+('Roberto',43300.00,102),
+('Tom',56100.00,103),
+('Yana',60200.00,101)
+
+INSERT INTO Passports(PassportNumber)
+VALUES
+('N34FG21B'),
+('K65LO4R7'),
+('ZE657QP2')
+
+
+ALTER TABLE [dbo].[Persons]
+ADD FOREIGN KEY(PassportID) REFERENCES [dbo].[Passports](PassportID)

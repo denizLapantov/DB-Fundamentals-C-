@@ -1,0 +1,21 @@
+CREATE FUNCTION ufn_CashInUsersGames(@gameName VARCHAR(50))
+RETURNS @rtnTable TABLE
+(
+    SumCash Money
+)
+AS
+BEGIN
+DECLARE @calculatedCash MONEY
+SET @calculatedCash = (SELECT SUM(odds.Cash) FROM
+        (SELECT *
+         FROM (SELECT g.Name, ug.Cash, ROW_NUMBER() OVER (ORDER BY Cash DESC) AS rowNumber
+               FROM UsersGames AS ug
+               INNER JOIN
+               Games AS g ON ug.GameId = g.Id
+               WHERE g.Name = @gameName) AS nug
+         WHERE nug.rowNumber % 2 = 1) AS odds
+  )
+INSERT INTO @rtnTable (SumCash)
+VALUES (@calculatedCash)
+RETURN;
+END

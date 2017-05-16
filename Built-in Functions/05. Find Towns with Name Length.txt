@@ -1,0 +1,4 @@
+SELECT a.Name FROM [dbo].[Towns] AS a
+WHERE LEN(a.Name) IN (5,6)
+ORDER BY a.Name ASC
+

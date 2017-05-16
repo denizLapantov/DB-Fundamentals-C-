@@ -1,0 +1,65 @@
+CREATE TABLE Directors 
+(
+  Id INT PRIMARY KEY IDENTITY,
+  DirectorName VARCHAR(110) NOT NULL,
+  Notes VARCHAR(max)
+)
+
+CREATE TABLE Genres
+(
+  Id INT PRIMARY KEY IDENTITY,
+  GenreName VARCHAR(50) NOT NULL,
+  Notes Varchar(max)
+)
+
+CREATE TABLE Categories
+(
+  Id INT PRIMARY KEY IDENTITY,
+  CategoryName VARCHAR(50) NOT NULL,
+  Notes Varchar(max)
+)
+
+CREATE TABLE Movies
+(
+  Id INT PRIMARY KEY IDENTITY,
+  Title VARCHAR(400) NOT NULL,
+  DirectorId INT NOT NULL,
+  CopyrightYear DATE,
+  Lenght INT NOT NULL,
+  GenreId INT NOT NULL ,
+  CategoryId  INT NOT NULL ,
+  Rating FLOAT NOT NULL,
+  Notes Varchar(max)
+)
+
+INSERT INTO Directors(DirectorName,Notes)
+VALUES 
+('Deniz','Super'),
+('Ervin','Sggdf'),
+('Nehad','fsdf'),
+('Deni','sdfsd'),
+('Denislav','Ssdf')
+
+INSERT INTO Genres(GenreName,Notes)
+VALUES 
+('Denizasd','Superddd'),
+('Ervinadsas','Sggdfdd'),
+('Nehadadas','fsdfddd'),
+('Deniasds','sdfsddd'),
+('Denislavdd','sdsaSsdf')
+
+INSERT INTO Categories(CategoryName,Notes)
+VALUES 
+('Dnizasd','Superdddas'),
+('Evinadsas','Sggdfddasd'),
+('Nhadadas','fsdfdddasd'),
+('Dniasds','sdfsdddasd'),
+('Dnislavdd','sdsaSassdf')
+
+INSERT INTO Movies(Title,DirectorId,Lenght,GenreId,CategoryId,Rating,Notes)
+VALUES 
+('Fight Club', 1, 150, 4, 1, 10.0,'dsfds'),
+('Snatch', 3, 120, 2, 1, 9.5,'fsdfds'),
+('Dark Knight', 2, 130, 1, 2, 9.7,'dsfdsf'),
+('Mad Max : Fury Road', 5, 110, 1, 2, 9.9,'dsfdsf'),
+('Kill Bill', 4, 170, 1, 2, 8.4,'sdfsdfsd')

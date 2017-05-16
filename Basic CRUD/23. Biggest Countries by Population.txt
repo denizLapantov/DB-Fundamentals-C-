@@ -1,0 +1,3 @@
+SELECT TOP 30 e.CountryName,e.Population FROM [dbo].[Countries] AS e
+WHERE e.ContinentCode = 'EU'
+ORDER BY e.Population DESC

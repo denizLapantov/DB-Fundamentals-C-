@@ -1,0 +1,9 @@
+CREATE TABLE Teachers
+(
+  TeacherID INT PRIMARY KEY IDENTITY(101,1),
+  Name VARCHAR(50),
+  ManagerID INT FOREIGN KEY(ManagerID) REFERENCES Teachers(TeacherID)
+)
+
+INSERT INTO Teachers(Name,ManagerID)
+VALUES ('John',null),('Maya',106),('Silvia',106),('Ted',105),('Marc',101),('Greta',101)

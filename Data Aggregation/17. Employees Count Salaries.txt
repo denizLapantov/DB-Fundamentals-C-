@@ -1,0 +1,3 @@
+SELECT  COUNT(e.Salary) AS 'COUNT'
+FROM [dbo].[Employees] AS e
+WHERE e.ManagerID IS NULL

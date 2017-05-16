@@ -1,0 +1,7 @@
+SELECT TOP 10 e.FirstName,e.LastName, e.DepartmentID FROM [dbo].[Employees] AS e
+INNER JOIN( SELECT em.DepartmentID, AVG(em.Salary) AS 'Salary' FROM [dbo].[Employees] AS em
+GROUP BY em.DepartmentID
+) AS emJ 
+ON e.DepartmentID = emj.DepartmentID
+WHERE emJ.Salary <e.Salary
+ORDER BY e.DepartmentID 

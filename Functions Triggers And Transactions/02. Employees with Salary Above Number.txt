@@ -1,0 +1,6 @@
+CREATE PROCEDURE usp_GetEmployeesSalaryAboveNumber (@Salary MONEY)
+AS
+BEGIN
+SELECT e.FirstName,e.LastName FROM [dbo].[Employees] AS e
+WHERE e.Salary > @Salary OR e.Salary = @Salary 
+END

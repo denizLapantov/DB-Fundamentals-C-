@@ -1,0 +1,2 @@
+SELECT e.FirstName,e.LastName FROM [dbo].[Employees] AS e
+WHERE CHARINDEX('ei',E.LastName) !=0

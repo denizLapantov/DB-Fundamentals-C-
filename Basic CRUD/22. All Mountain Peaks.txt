@@ -1,0 +1,2 @@
+SELECT e.PeakName FROM [dbo].[Peaks] AS e
+ORDER BY e.PeakName ASC

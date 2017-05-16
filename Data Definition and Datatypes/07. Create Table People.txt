@@ -1,0 +1,19 @@
+CREATE TABLE People 
+(
+Id INT NOT NULL IDENTITY PRIMARY KEY,
+Name VARCHAR(200) NOT NULL,
+Picture VARBINARY(2),
+Height FLOAT(2),
+Weight Float(2),
+Gender CHARACTER(1) NOT NULL,
+BirthDate DATE NOT NULL,
+Biography VARCHAR(max)
+)
+
+INSERT INTO People(Name, Height, Weight, Gender, BirthDate, Biography)
+VALUES 
+('Pesho',1.70,71.20,'m','1992-04-27', 'Programist fwdf fdsfdsfsdf '),
+('Tanq',1.80,61.40,'f','1993-03-28', 'fdssafds dfsfdsfdsfdsf '),
+('Ceco',1.90,51.60,'m','1996-02-29', 'sdfdsfsdfdsfeswfw fewfwef fwe fewf'),
+('Ginka',1.60,81.90,'f','1995-01-30', 'sdfdsfdsfdsfdssdfdsfdsfdsfdsfdsffwe'),
+('Penka',1.66,84.92,'f','1999-06-12', 'sdfdsfdsfdssdfdsfdsfdsfdsfdsffwe')

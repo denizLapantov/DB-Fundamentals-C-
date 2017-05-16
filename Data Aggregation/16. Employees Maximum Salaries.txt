@@ -1,0 +1,5 @@
+SELECT e.DepartmentID, MAX(e.Salary) AS 'MiximumSalary'
+FROM [dbo].[Employees] AS e
+GROUP BY e.DepartmentID
+HAVING MAX(e.Salary) < 30000 OR MAX(e.Salary) > 70000
+

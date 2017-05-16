@@ -1,0 +1,2 @@
+SELECT COUNT(e.Id) AS 'Count'
+FROM [dbo].[WizzardDeposits] AS e

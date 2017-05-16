@@ -1,0 +1,13 @@
+   SELECT t.range as 'AgeGroups', count(*) as [number of occurences]
+from (
+  select case 
+    when e.Age between  0 and 10 then '[0-10]'
+    when e.Age between 11 and 20 then '[11-20]'
+    when e.Age between 21 and 30 then '[21-30]'
+	when e.Age between 31 and 40 then '[31-40]'
+	when e.Age between 41 and 50 then '[41-50]'
+    when e.Age between 51 and 60 then '[51-60]'
+    else '[61+]' end as range
+  from [dbo].[WizzardDeposits] as e) t
+group by t.range
+    

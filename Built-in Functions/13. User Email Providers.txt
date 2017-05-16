@@ -1,0 +1,2 @@
+SELECT U.Username, SUBSTRING(U.Email ,CHARINDEX('@',U.Email) + 1, LEN(U.Email))  AS 'DSD' FROM [dbo].[Users] as U
+ORDER BY DSD, U.Username

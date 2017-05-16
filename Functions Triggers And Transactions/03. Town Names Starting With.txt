@@ -1,0 +1,6 @@
+CREATE PROCEDURE usp_GetTownsStartingWith  (@String VARCHAR(50))
+AS
+BEGIN
+SELECT e.Name FROM [dbo].Towns AS e
+WHERE LEFT(e.Name, LEN(@String)) = LOWER(@String)
+END

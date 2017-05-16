@@ -1,0 +1,5 @@
+ SELECT DISTINCT SUBSTRING(e.FirstName,1,1) As 'firstLetter'
+  FROM [dbo].[WizzardDeposits] AS e
+  WHERE e.DepositGroup = 'Troll Chest'
+  GROUP BY e.FirstName
+ 

@@ -1,0 +1,8 @@
+CREATE VIEW V_EmployeeNameJobTitle AS
+SELECT
+CASE
+WHEN e.MiddleName IS NOT NULL THEN e.FirstName + ' ' + e.MiddleName + ' ' + e.LastName
+WHEN e.MiddleName IS  NULL THEN e.FirstName + '  ' + e.LastName
+END
+AS "Full Name", e.JobTitle  FROM [dbo].[Employees] AS e
+

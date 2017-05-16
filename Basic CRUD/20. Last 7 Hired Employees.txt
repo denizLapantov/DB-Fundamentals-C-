@@ -1,0 +1,2 @@
+SELECT TOP 7 E.FirstName,e.LastName,e.HireDate FROM [dbo].[Employees] AS e
+ORDER BY e.HireDate DESC

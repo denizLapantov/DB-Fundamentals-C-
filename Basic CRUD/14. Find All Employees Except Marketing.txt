@@ -1,0 +1,2 @@
+SELECT e.FirstName, e.LastName AS 'FULLNAME' FROM [dbo].[Employees] as e
+WHERE e.DepartmentID != 4

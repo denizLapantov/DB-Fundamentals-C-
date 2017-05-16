@@ -1,0 +1,10 @@
+CREATE PROCEDURE usp_GetEmployeesFromTown  (@town VARCHAR(50))
+AS
+BEGIN
+SELECT e.FirstName,e.LastName FROM [dbo].Employees AS e
+INNER JOIN  [dbo].Addresses AS a
+ON e.AddressID = a.AddressID
+INNER JOIN [dbo].Towns AS t
+ON a.TownID = t.TownID
+WHERE t.Name = @town
+END
